@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+/*Media Queires para responsividade do site*/
+@media only screen and (max-width: 950px) {
+    
+    .box {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .main-login {
+        flex-direction: column;
+    }
+
+    .main-div1-login>h1 {
+        display: none;
+    }
+
+    .main-div1-login {
+        flex-direction: row;
+    }
+    
+    .gm-logo-img {
+        width: 80%;
+    }
+}
