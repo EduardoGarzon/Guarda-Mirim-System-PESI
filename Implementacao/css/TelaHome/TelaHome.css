@@ -13,10 +13,10 @@ body,
 html {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
     overflow: hidden;
     background: hsl(226, 85%, 11%, 100%);
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -82,19 +82,17 @@ header {
 }   
 
 main {
+    position: relative;
     width: 100%;
-    height: 100%;
+    height: 85%;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .div-text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 12em;
+    margin-bottom: 220px;
 }
 
 .div-text h2 {
@@ -107,9 +105,9 @@ main {
 }
 
 .div-img1 {
-    overflow: hidden;
-    position: fixed;
-    margin-top: 180px;
+    position: absolute;
+    margin-top: 130px;
+    z-index: 2;
 }
 
 .img1 {
@@ -117,25 +115,18 @@ main {
 }
 
 footer {
+    position: relative;
     width: 100%;
-    height: 100px;
+    height: 15%;
     border-top: 2px solid #141414;
     background: #0A0A0A;
+    display: flex;
+    justify-content: center;
 }
 
-.div-img2 {
 
-}
-
-.img2 {
-    width: 100px;
-}
-
-.div-img3 {
-
-}
-
-.div3 {
+footer img {
+    position: absolute;
     width: 200px;
+    bottom: -50px;
 }
-
