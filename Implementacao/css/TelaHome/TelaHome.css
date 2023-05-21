@@ -43,7 +43,7 @@ header {
     left: 60px;
 }
 
-.header-logo {
+.header-msg {
     position: relative;
     font-size: 2em;
     font-weight: 700;
@@ -68,6 +68,7 @@ header {
 }
 
 .mobile-menu {
+    display: none;
     cursor: pointer;
 }
 
@@ -76,8 +77,8 @@ header {
     height: 2px;
     background: #0A0A0A;
     margin: 8px;
+    transition: 0.3s;
 }
-
 
 .header-nav a {
     position: relative;
@@ -115,7 +116,7 @@ header {
     transition: transform .3s;
 }
 
-.header-nav a:hover::after, 
+.header-nav a:hover::after,
 .header-nav a:hover::before,
 .header-nav a:hover {
     transform: scaleX(1);
@@ -159,12 +160,11 @@ footer {
     position: relative;
     width: 100%;
     height: 15%;
-    border-top: 2px solid #141414;
+    border-top: 8px solid #E6D353;
     background: #0A0A0A;
     display: flex;
     justify-content: center;
 }
-
 
 footer img {
     position: absolute;
