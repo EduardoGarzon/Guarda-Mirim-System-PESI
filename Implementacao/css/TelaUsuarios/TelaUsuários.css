@@ -1,0 +1,132 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;1,100;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    background: hsl(226, 85%, 11%, 100%);
+}
+
+header {
+    position: fixed;
+    padding: 10px;
+    background: #eeeff1;
+    height: 13vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 8px solid #E6D353;
+}
+
+.h2-msg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: #0A0A0A;
+    font-size: 1.7em;
+}
+
+.li-home {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    list-style: none;
+    transition: 0.5s;
+}
+
+.li-home span {
+    position: absolute;
+}
+
+.li-home:hover {
+    width: 150px;
+    box-shadow: 0px 0px 10px #E6D353;
+}
+
+.li-home::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 60px;
+    background: #E6D353;
+    box-shadow: 0px 0px 1px #E6D353;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.li-home:hover::before {
+    opacity: 1;
+}
+
+.li-home::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    height: 100%;
+    border-radius: 60px;
+    background: #E6D353;
+    transition: 0.5s;
+    filter: blur(15px);
+    z-index: -1;
+    opacity: 0;
+}
+
+.li-home:hover::after {
+    opacity: 0.5;
+}
+
+.span-home ion-icon {
+    color: #0A0A0A;
+    font-size: 1.35em;
+    transition: 0.5s;
+    transition-delay: 0.25s;
+    /*
+    #0A0A0A
+    #eeeff1
+    */
+}
+
+.li-home:hover .span-home {
+    transform: scale(0);
+    color: #eeeff1;
+    transition-delay: 0s;
+}
+
+.span-home-msg {
+    color: #eeeff1;
+    text-shadow: 0px 0px 2px #0A0A0A;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    font-size: 1.1em;
+    transform: scale(0);
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+
+.li-home:hover .span-home-msg {
+    transform: scale(1);
+    transition-delay: 0.25s;
+}
+
+
+main {}
+
+footer {}
