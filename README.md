@@ -1,2 +1,4 @@
-# Guarda-Mirim-System-PESI
-This repository contains the development of the implementation of a class management system for the Guarda Mirim of the discipline project of the subject PESI (Software Engineering Process I).
+# Guarda Mirim System
+This repository contains the development of a class management system for the institution Guarda Mirim.
+
+This implementation is part of the PESI discipline project (Software Engineering Process I).
