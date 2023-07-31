@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+  <title>Menu Usuarios</title>
+
+  <link rel="stylesheet" href="css/telausuarios/telaOpcoes.css">
+</head>
+
+<body>
+<div th:replace="fragmentos/fragmentos :: cabecalho"></div>
+<main>
+  <div class="container-form">
+    <h4>Menu Usuarios</h4>
+
+    <form method="post" action="pesquisarUsuario" th:object="${monitor}">
+      <div class="input-group">
+        <input type="text" th:field="*{nome}" class="form-group" placeholder="Busque algum usuario pelo nome!">
+        <div class="input-group-append">
+          <button type="submit" class="btn btn-outline-secondary">Pesquisar</button>
+        </div>
+      </div>
+    </form>
+
+    <div class="row">
+
+      <div class="card" style="width: 300px">
+        <img class="card-img-top" src="bancoimagens/telaopcoes/cadastro-img.png" alt="Imagem Cadastro">
+        <div class="card-body">
+          <h5 class="card-title">CADASTRAR USUARIO</h5>
+          <p class="card-text">Cadastre novos usuarios no sistema.</p>
+          <a class="btn btn-outline-primary" href="/selecionarTipoUsuario">Cadastrar</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 300px">
+        <img class="card-img-top" src="bancoimagens/telaopcoes/pesquisa-img.png" alt="Imagem Pesquisa">
+        <div class="card-body">
+          <h5 class="card-title">LISTAR USUARIOS</h5>
+          <p class="card-text">Exibir todos os usuarios do sistema.</p>
+          <a class="btn btn-outline-primary" href="/usuariosCadastrados">Exibir</a>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+  <title>CADASTROS</title>
+
+  <link rel="stylesheet" href="css/telausuarios/tabelaUser.css">
+</head>
+
+<body>
+  <div th:replace="fragmentos/fragmentos :: cabecalho"></div>
+
+  <main>
+    <div class="container" style="margin-top: 50px">
+      <h4 style="color: #eeeff1">Usuários do Sistema</h4>
+      <hr style="color: #eeeff1">
+
+      <table class="table table-bordered table-hover">
+        <thead>
+          <th scope="col">Nome</th>
+          <th scope="col">RA</th>
+          <th scope="col">Curso</th>
+          <th scope="col">Status</th>
+          <th scope="col">Acoes</th>
+
+        </thead>
+        <tbody>
+          <tr scope="row" th:each="users : ${Users}">
+            <td th:text="${users.nome}"></td>
+            <td th:text="${users.RA}"></td>
+            <td th:text="${users.curso}"></td>
+            <td th:text="${users.status}"></td>
+
+            <td>
+              <a class="btn btn-primary" th:href="@{alterar/{id}(id=${users.id})}">
+                <i class="fas fa-edit"></i> Editar </a>
+              <a class="btn btn-danger" th:href="@{excluir/{id}(id=${users.id})}">
+                <i class="fas fa-edit"></i> Deletar </a>
+            </td>
+
+          </tr>
+
+
+        </tbody>
+      </table>
+
+      <a class="btn btn-outline-dark" style="width: 100px; height: 40px; margin-top: 10px; z-index: 1000" href="telaOpcoesUser">
+        VOLTAR</a>
+
+    </div>
+  </main>
+
+  <script src="/webjars/jquery/3.6.4/jquery.min.js"></script>
+  <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

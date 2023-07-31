@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+    <title>HOME</title>
+
+    <!--Css Link-->
+    <link rel="stylesheet" href="css/telahome/TelaHome.css">
+    <link rel="stylesheet" href="css/telahome/MediaQueiresHome.css">
+
+</head>
+
+<body>
+    <div th:replace="fragmentos/fragmentos :: cabecalho"></div>
+    <main>
+        <div class="div-text">
+            <h2>Bem Vindo(a) ao Sistema.</h2>
+        </div>
+        <div class="div-img1">
+            <img src="bancoimagens/telahome/Students-rafiki.png" alt="Students" class="img1">
+        </div>
+    </main>
+
+    <div th:replace="fragmentos/fragmentos :: rodape"></div>
+
+    <script src="js/telahome/TelaHome.js"></script>
+    <script src="/webjars/jquery/3.6.4/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

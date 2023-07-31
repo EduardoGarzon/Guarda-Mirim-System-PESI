@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+    <title>HOME</title>
+
+    <!--Css Link-->
+    <link rel="stylesheet" href="css/telahome/TelaHome.css">
+    <link rel="stylesheet" href="css/telahome/MediaQueiresHome.css">
+
+</head>
+
+<body>
+    <header th:fragment="cabecalho">
+        <a class="navbar-icon" th:href="@{/index}">
+            <img src="/bancoimagens/telahome/gm-logosf4.png" alt="Logo Guarga Mirim" class="header-logo-img">
+        </a>
+
+        <h2 class="header-msg">SISTEMA GM</h2>
+
+        <nav class="header-nav">
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+
+            <ul class="nav-list">
+                <li><a href="">Eventos</a></li>
+                <li><a href="">Relatórios</a></li>
+                <li><a href="">Turmas</a></li>
+                <li><a th:href="@{telaOpcoesUser}">Usuários</a></li>
+                <li><a href="">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <footer th:fragment="rodape">
+        <img src="bancoimagens/telahome/Unioeste-logo5.png" alt="" class="img2">
+    </footer>
+
+    <script src="/webjars/jquery/3.6.4/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
