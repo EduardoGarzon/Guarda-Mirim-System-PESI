@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+  <title>Cadastro</title>
+
+  <link rel="stylesheet" href="css/telausuarios/insertCoordenador.css">
+</head>
+
+<body>
+<div th:replace="fragmentos/fragmentos :: cabecalho"></div>
+<main>
+  <div class="container-form">
+    <h4>+ Novo Usuário Coordenador</h4>
+
+    <form method="post" action="/insertUser2" th:object="${coordenador}">
+
+      <!-- Nome -->
+      <div class="row">
+        <div class="col-md-6 form-group offset-md-3">
+          <div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('nome')}">
+            <label class="validation-message" th:errors="*{nome}"></label>
+          </div>
+          <label>Nome de Usuário</label>
+          <input class="form-control" placeholder="Ex: Luiz Eduardo" th:field="*{nome}">
+        </div>
+      </div>
+
+      <!-- CPF -->
+      <div class="row">
+        <div class="col-md-6 form-group offset-md-3">
+          <div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('CPF')}">
+            <label class="validation-message" th:errors="*{CPF}"></label>
+          </div>
+          <label>CPF</label>
+          <input class="form-control" placeholder="Ex: 123.456.789-10" th:field="*{CPF}">
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="row">
+        <div class="col-md-6 form-group offset-md-3">
+          <div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('email')}">
+            <label class="validation-message" th:errors="*{email}"></label>
+          </div>
+          <label>Email</label>
+          <input class="form-control" placeholder="Ex: pessoa@gmail.com" th:field="*{email}">
+        </div>
+      </div>
+
+      <!-- Contato -->
+      <div class="row">
+        <div class="col-md-6 form-group offset-md-3">
+          <div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('contato')}">
+            <label class="validation-message" th:errors="*{contato}"></label>
+          </div>
+          <label>Contato</label>
+          <input type="number" class="form-control" placeholder="Ex: (45)1234-5678" th:field="*{contato}">
+        </div>
+      </div>
+
+      <!-- Senha -->
+      <div class="row">
+        <div class="col-md-6 form-group offset-md-3">
+          <div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('senha')}">
+            <label class="validation-message" th:errors="${coordenador.senha}"></label>
+          </div>
+          <label>Senha</label>
+          <input class="form-control" th:field="*{senha}">
+        </div>
+      </div>
+
+      <div class="row">
+        <button type="submit" class="btn btn-success offset-md-4"
+                style="width: 100px; height: 40px; margin-top: 10px; z-index: 1000">SALVAR</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="btn btn-outline-dark" style="width: 100px; height: 40px; margin-top: 10px; z-index: 1000" href="telaOpcoesUser">
+          VOLTAR</a>
+      </div>
+    </form>
+  </div>
+</main>
+
+<script src="/webjars/jquery/3.6.4/jquery.min.js"></script>
+<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

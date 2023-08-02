@@ -23,29 +23,34 @@
         </div>
         <div class="main-div2-login"> <!--div direita (caixa de login)-->
             <div class="box">
-                <form class="form-cardlogin" method="post" action="/"  th:object="${user}"> <!--login card-->
+                <form class="form-cardlogin" method="post" th:action="@{/}"> <!--login card-->
+                    <!-- Exibir mensagem de erro, caso exista -->
+                    <div th:if="${param.error}" class="error-message">
+                        <p th:text="${param.error}"></p>
+                    </div>
                     <h1>LOGIN</h1>
                     <div class="div-textfield">
-                        <label for="userlabel">Usuário<i class="material-symbols-sharp"
+                        <label>Usuário<i class="material-symbols-sharp"
                                 style="position: absolute; margin-left: 6px; margin-top: -2px;">
                                 person
                             </i></label>
                         <input name="usernumber" id="usernumber" placeholder="R.A ou CPF" required
-                            maxlength="11" th:field="*{CPF}">
+                            maxlength="11">
                     </div>
                     <div class="div-textfield">
-                        <label for="keylabel">Senha<i class="material-symbols-sharp"
+                        <label>Senha<i class="material-symbols-sharp"
                                 style="position: absolute; margin-left: 10px; margin-top: -2px;">
                                 password
                             </i></label>
                         <input type="password" name="keynumber" id="keynumber" placeholder="Senha" required
-                            minlength="4" maxlength="16" th:field="*{senha}">
+                            minlength="4" maxlength="16">
                     </div>
                     <input class="btn-login" type="submit" value="Entrar">
                     <div class="div-person-img">
                         <img src="/bancoimagens/telalogin/person.svg" class="person-img" alt="Person image">
                     </div>
                 </form>
+
             </div>
         </div>
     </main>
